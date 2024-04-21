@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Image</title>
+</head>
+<body>
+    <h1>Image Viewer</h1>
+    <img src="{{ url_for('send_image', folder_path=folder_path, filename=image_file) }}" alt="Image" style="max-width: 500px;">
+    <form action="{{ url_for('view_image') }}" method="post">
+        <button type="submit" name="action" value="move">Move</button>
+        <button type="submit" name="action" value="delete">Delete</button>
+        <button type="submit" name="action" value="skip">Skip</button>
+    </form>
+        
+</body>
+</html>
